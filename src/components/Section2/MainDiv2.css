@@ -1,0 +1,46 @@
+
+.Text1 {
+    position: relative;
+    height: auto;
+    width: auto;
+    margin-left: 35px;
+    margin-right: 35px;
+    margin-bottom: 15px;
+    font-weight: 400;
+    margin-top: 0;
+    
+}
+.Text1 p {
+    font-size: clamp(1.3rem, 1vw, 2rem);
+    text-shadow: 3px 4px 7px rgba(73, 73, 73, 0.8);
+    line-height: 27px;
+    
+    color: white;
+    width: 100%;
+
+}
+.content p {
+    text-indent: 20px; /* Adjust the value to increase or decrease the indentation */
+  }
+  
+
+
+br {
+    display: block; 
+    content: ""; 
+    margin-top: 1rem; 
+}
+@media only screen and (max-width: 870px) {
+  .Card1 {
+      width: 85%;
+  }
+}
+
+@media only screen and (min-width: 870px) {
+    .Text1 {
+        max-width: 60%;
+    }
+    .Card1 {
+        max-width: 60%;
+    }
+}
