@@ -1,21 +1,23 @@
 {
   "files": {
-    "main.css": "/portfolio_website/static/css/main.9458b151.css",
-    "main.js": "/portfolio_website/static/js/main.6d521aca.js",
-    "static/media/hack.jpg": "/portfolio_website/static/media/hack.be1641ef29a4bad8acb6.jpg",
-    "static/media/ethba.jpg": "/portfolio_website/static/media/ethba.7c3582cd2814e0f8326d.jpg",
-    "static/media/Nftones.jpg": "/portfolio_website/static/media/Nftones.7a287e4db1e17d659bc0.jpg",
-    "static/media/Head.png": "/portfolio_website/static/media/Head.f15f9b39cd8b453bb455.png",
+    "main.css": "/portfolio_website/static/css/main.dcca3d67.css",
+    "main.js": "/portfolio_website/static/js/main.320c93e0.js",
+    "static/media/pptechnik.png": "/portfolio_website/static/media/pptechnik.c653fe3d3473c81926cf.png",
+    "static/media/enpo.png": "/portfolio_website/static/media/enpo.60c214e0ff1dd43e92bd.png",
+    "static/media/ady.png": "/portfolio_website/static/media/ady.ac4c9ee0f3bb005373ca.png",
+    "static/media/semantic.png": "/portfolio_website/static/media/semantic.621debd96daccc5bab19.png",
+    "static/media/head.png": "/portfolio_website/static/media/head.f15f9b39cd8b453bb455.png",
+    "static/media/nftones.jpg": "/portfolio_website/static/media/nftones.aa061166faedb58d3c99.jpg",
     "static/media/linkedIcon.svg": "/portfolio_website/static/media/linkedIcon.818b24d4ffa1a3dd20d3081f746597a3.svg",
     "index.html": "/portfolio_website/index.html",
     "static/media/gitIcon.svg": "/portfolio_website/static/media/gitIcon.fc0ffe042a9582d2a394e1c609baa9f2.svg",
     "static/media/logo.svg": "/portfolio_website/static/media/logo.80677fecf1d9e5faf0b08803a05dbea7.svg",
     "static/media/xlogo.svg": "/portfolio_website/static/media/xlogo.63e6aefc8ecac35cc4c791e1f6b6bd8d.svg",
-    "main.9458b151.css.map": "/portfolio_website/static/css/main.9458b151.css.map",
-    "main.6d521aca.js.map": "/portfolio_website/static/js/main.6d521aca.js.map"
+    "main.dcca3d67.css.map": "/portfolio_website/static/css/main.dcca3d67.css.map",
+    "main.320c93e0.js.map": "/portfolio_website/static/js/main.320c93e0.js.map"
   },
   "entrypoints": [
-    "static/css/main.9458b151.css",
-    "static/js/main.6d521aca.js"
+    "static/css/main.dcca3d67.css",
+    "static/js/main.320c93e0.js"
   ]
 }
