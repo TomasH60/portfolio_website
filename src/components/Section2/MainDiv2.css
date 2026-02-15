@@ -2,9 +2,9 @@
 .Text1 {
     position: relative;
     height: auto;
-    width: auto;
-    margin-left: 35px;
-    margin-right: 35px;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
     margin-bottom: 15px;
     font-weight: 400;
     margin-top: 0;
@@ -179,7 +179,7 @@ br {
 
 @media only screen and (min-width: 870px) {
     .Text1 {
-        max-width: 60%;
+        max-width: 100%;
     }
     .Card1 {
         max-width: 60%;

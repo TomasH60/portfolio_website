@@ -1,12 +1,11 @@
 import React from "react";
 import "../Section3/MainDiv3.css";
-import { motion } from "framer-motion";
 import ContainerItem from "../Section3/ContainerItem";
 import EnpoImage from "../../assets/images/enpo.png";
 import PPTechnikImage from "../../assets/images/pptechnik.png";
 import AZImage from "../../assets/images/ady.png";
 
-const MainDiv4 = React.forwardRef((props, ref) => {
+const MainDiv4 = () => {
   const clientProjects = [
     {
       title: "ENPO",
@@ -28,19 +27,14 @@ const MainDiv4 = React.forwardRef((props, ref) => {
       title: "AZ Konzervaren",
       subtitle: "Client Website",
       text: "Implemented the full AZ Konzervaren website (except the design layer), including CMS setup and React JS integration, content structure, and production-ready frontend behavior.",
-      link: "https://www.azkonzervaren.sk/vegetables",
+      link: "https://www.azkonzervaren.sk/",
       buttonText: "Visit Website",
       imgsrc: AZImage,
     },
   ];
 
   return (
-    <motion.div
-      className="Container"
-      animate={props.onAnimate}
-      style={{ y: "10vh", opacity: 0 }}
-      ref={ref}
-    >
+    <div className="Container">
       {clientProjects.map((project) => (
         <ContainerItem
           key={project.title}
@@ -52,8 +46,8 @@ const MainDiv4 = React.forwardRef((props, ref) => {
           buttonText={project.buttonText}
         />
       ))}
-    </motion.div>
+    </div>
   );
-});
+};
 
 export default MainDiv4;

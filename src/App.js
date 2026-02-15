@@ -1,127 +1,84 @@
 import Header from "./components/Header/Header";
 import MainDiv2 from "./components/Section2/MainDiv2";
 import MainDiv from "./components/Section1/MainDiv";
-import { useEffect } from "react";
-import { useInView } from "react-intersection-observer";
-import { motion, useAnimation } from "framer-motion";
 import MainDiv3 from "./components/Section3/MainDiv3";
 import MainDiv4 from "./components/Section4/MainDiv4";
 import Footer from "./components/Footer/Footer";
 import React from "react";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+
+const StackSection = ({ id, title, children, zIndex, inViewRef, isVisible }) => {
+  return (
+    <section id={id} ref={inViewRef}>
+      <motion.div
+        className="StackPanel"
+        style={{ zIndex }}
+        initial={{ opacity: 0, y: 36, scale: 0.96 }}
+        animate={isVisible ? { opacity: 1, y: 0, scale: 1 } : { opacity: 0, y: 36, scale: 0.96 }}
+        transition={{ type: "spring", duration: 0.7, bounce: 0.16 }}
+      >
+        <h1>{title}</h1>
+        {children}
+      </motion.div>
+    </section>
+  );
+};
 
 function App() {
-  const [ref, inView] = useInView({
-    threshold: 0.3,
-  });
-  const [ref1, inView1] = useInView({
-    threshold: 0.6,
-  });
   const [ref2, inView2] = useInView({
-    threshold: 0.05,
+    threshold: 0.2,
+    rootMargin: "-10% 0px -20% 0px",
+    triggerOnce: false,
   });
   const [ref3, inView3] = useInView({
-    threshold: 0.1
+    threshold: 0.2,
+    rootMargin: "-10% 0px -20% 0px",
+    triggerOnce: false,
   });
   const [ref4, inView4] = useInView({
-    threshold: 0.05,
+    threshold: 0.2,
+    rootMargin: "-10% 0px -20% 0px",
+    triggerOnce: false,
   });
-  const [ref5, inView5] = useInView({
-    threshold: 0.1,
-  });
-  const animation = useAnimation();
-  const animation1 = useAnimation();
-  const animation2 = useAnimation();
-  const animation3 = useAnimation();
-  const animation4 = useAnimation();
-  const animation5 = useAnimation();
-  console.log(inView, inView1, inView2, inView3, inView4, inView5);
-  useEffect(() => {
-    if (inView) {
-      animation1.start({
-        opacity: 1,
-        transition: {
-          duration: 1,
-        },
-      });
-    }
-    if (inView1) {
-      animation.start({
-        y: 0,
-        opacity: 1,
-        transition: {
-          type: "spring",
-          duration: 1,
-          bounce: 0.3,
-        },
-      });
-    }
-    if (inView2) {
-      animation2.start({
-        opacity: 1,
-        transition: {
-          duration: 1,
-        },
-      });
-    }
-    
-    if (inView3) {
-      animation3.start({
-        y: 0,
-        opacity: 1,
-        transition: {
-          type: "spring",
-          duration: 1,
-          bounce: 0.3,
-        },
-      });
-    }
 
-    if (inView4) {
-      animation4.start({
-        opacity: 1,
-        transition: {
-          duration: 1,
-        },
-      });
-    }
-
-    if (inView5) {
-      animation5.start({
-        y: 0,
-        opacity: 1,
-        transition: {
-          type: "spring",
-          duration: 1,
-          bounce: 0.3,
-        },
-      });
-    }
-    
-  }, [animation, animation1, animation2, animation3, animation4, animation5, inView, inView1, inView2, inView3, inView4, inView5]);
   return (
     <>
       <Header />
       <section id="Section1">
         <MainDiv />
       </section>
-      <section id="Section2" ref={ref}>
-        <motion.h1 animate={animation1} style={{ opacity: 0 }}>
-          About Me
-        </motion.h1>
-        <MainDiv2 onAnimate={animation} ref={ref1} />
-      </section>
-      <section id="Section3" ref={ref2}>
-        <motion.h1 animate={animation2} style={{ opacity: 0 }}>
-          Personal Projects
-        </motion.h1>
-        <MainDiv3 onAnimate={animation3} ref={ref3}/>
-      </section>
-      <section id="Section4" ref={ref4}>
-        <motion.h1 animate={animation4} style={{ opacity: 0 }}>
-          Freelance Work
-        </motion.h1>
-        <MainDiv4 onAnimate={animation5} ref={ref5}/>
-      </section>
+
+      <StackSection
+        id="Section2"
+        title="About Me"
+        zIndex={2}
+        inViewRef={ref2}
+        isVisible={inView2}
+      >
+        <MainDiv2 />
+      </StackSection>
+
+      <StackSection
+        id="Section3"
+        title="Personal Projects"
+        zIndex={3}
+        inViewRef={ref3}
+        isVisible={inView3}
+      >
+        <MainDiv3 />
+      </StackSection>
+
+      <StackSection
+        id="Section4"
+        title="Freelance Work"
+        zIndex={4}
+        inViewRef={ref4}
+        isVisible={inView4}
+      >
+        <MainDiv4 />
+      </StackSection>
+
       <Footer />
     </>
   );

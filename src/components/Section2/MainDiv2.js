@@ -1,15 +1,9 @@
 import React from "react";
 import "./MainDiv2.css";
-import { motion } from "framer-motion";
 
-const MainDiv2 = React.forwardRef((props, ref) => {
+const MainDiv2 = () => {
   return (
-    <motion.div
-      className="Text1"
-      animate={props.onAnimate}
-      style={{ y: "10vh", opacity: 0 }}
-      ref={ref}
-    >
+    <div className="Text1">
       <div className="content">
         <div className="aboutBlock">
           <div className="aboutCards">
@@ -113,8 +107,8 @@ const MainDiv2 = React.forwardRef((props, ref) => {
           </div>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
-});
+};
 
 export default MainDiv2;

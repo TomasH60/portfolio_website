@@ -29,31 +29,40 @@ body,
 #Section2,
 #Section3,
 #Section4 {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  top: 0;
+  display: block;
   position: relative;
-  height: auto;
+  min-height: auto;
+  padding: 26px 0 26px;
 }
 #Section3,
 #Section4 {
-  height: auto;
-  justify-content: space-between;
+  margin-top: 0;
 }
 #Section2 {
   scroll-margin-top: 70px;
 }
-#Section2 > h1,
-#Section3 > h1,
-#Section4 > h1 {
+.StackPanel {
   position: relative;
   top: 0;
-  text-shadow: 3px 4px 7px rgba(73, 73, 73, 0.8);
+  width: min(1150px, 92vw);
+  margin: 0 auto;
+  border-radius: 26px;
+  padding: 26px 18px 20px;
+  background: rgba(0, 0, 0, 0.28);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 12px 32px;
+  backdrop-filter: blur(2px);
+}
 
+.StackPanel > h1 {
+  position: relative;
+  margin: 0 0 10px 0;
+  text-shadow: 3px 4px 7px rgba(73, 73, 73, 0.8);
   color: white;
-  font-size: clamp(2.5rem, 2vw, 6rem);
+  font-size: clamp(2.2rem, 2vw, 5rem);
+}
+
+#Section2 .StackPanel > h1 {
+  margin-bottom: 20px;
 }
 
 /** {
@@ -73,5 +82,34 @@ body,
   }
   .MobileMenuBlur {
     display: none !important;
+  }
+}
+
+@media only screen and (max-width: 1015px) {
+  #Section2,
+  #Section3,
+  #Section4 {
+    min-height: auto;
+    margin-top: 0;
+    padding: 18px 0;
+  }
+
+  .StackPanel {
+    position: relative;
+    top: 0;
+    width: 100vw;
+    max-width: none;
+    margin: 0;
+    border-radius: 0;
+    padding: 18px 12px 12px;
+    box-sizing: border-box;
+  }
+
+  .StackPanel > h1 {
+    margin-bottom: 18px;
+  }
+
+  #Section2 .StackPanel > h1 {
+    margin-bottom: 24px;
   }
 }

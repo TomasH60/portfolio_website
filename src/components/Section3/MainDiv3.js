@@ -1,11 +1,10 @@
 import React from "react";
 import "./MainDiv3.css";
 import ContainerItem from "./ContainerItem";
-import { motion } from "framer-motion";
 import NFTones from "../../assets/images/nftones.jpg";
 import SemanticGraph from "../../assets/images/semantic.png";
 
-const MainDiv3 = React.forwardRef((props, ref) => {
+const MainDiv3 = () => {
   const projects = [
     {
       title: "Semantic Blockchain",
@@ -27,12 +26,7 @@ const MainDiv3 = React.forwardRef((props, ref) => {
   ];
 
   return (
-    <motion.div
-      className="Container"
-      animate={props.onAnimate}
-      style={{ y: "10vh", opacity: 0 }}
-      ref={ref}
-    >
+    <div className="Container">
       {projects.map((project) => (
         <ContainerItem
           key={project.title}
@@ -46,8 +40,8 @@ const MainDiv3 = React.forwardRef((props, ref) => {
           previewClassName={project.previewClassName}
         />
       ))}
-    </motion.div>
+    </div>
   );
-});
+};
 
 export default MainDiv3;
