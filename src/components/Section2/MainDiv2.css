@@ -22,8 +22,149 @@
 .content p {
     text-indent: 20px; /* Adjust the value to increase or decrease the indentation */
   }
-  
 
+.aboutBlock {
+  margin-top: 10px;
+}
+
+.aboutBlock h3 {
+  color: white;
+  text-shadow: 3px 4px 7px rgba(73, 73, 73, 0.8);
+  margin-bottom: 16px;
+}
+
+.aboutCards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.aboutCard {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 18px;
+  padding: 14px 16px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  color: white;
+}
+
+.aboutCard h4 {
+  margin: 0 0 8px 0;
+}
+
+.aboutCard p {
+  margin: 0;
+  text-indent: 0;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.aboutEducation {
+  text-indent: 0 !important;
+  margin-top: 14px;
+  margin-bottom: 0;
+  font-size: 1rem !important;
+  line-height: 1.35 !important;
+  opacity: 0.95;
+}
+
+.experienceBlock {
+  margin-top: 30px;
+}
+
+.experienceBlock h3 {
+  color: white;
+  text-shadow: 3px 4px 7px rgba(73, 73, 73, 0.8);
+  margin-bottom: 16px;
+}
+
+.experienceCard {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 18px;
+  padding: 16px 18px;
+  margin-bottom: 16px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  color: white;
+}
+
+.experienceTopRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  align-items: baseline;
+}
+
+.experienceTopRow h4 {
+  margin: 0;
+}
+
+.experienceTopRow span {
+  font-size: 0.95rem;
+  opacity: 0.9;
+  margin-left: auto;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.experienceCompany {
+  text-indent: 0 !important;
+  margin-top: 8px;
+  margin-bottom: 10px;
+}
+
+.experienceLink {
+  color: #9fe5ff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.experienceLink:hover {
+  text-decoration: underline;
+}
+
+.experienceCard ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.experienceCard li {
+  margin-bottom: 6px;
+  line-height: 1.4;
+}
+
+.skillsBlock {
+  margin-top: 26px;
+}
+
+.skillsBlock h3 {
+  color: white;
+  text-shadow: 3px 4px 7px rgba(73, 73, 73, 0.8);
+  margin-bottom: 16px;
+}
+
+.skillsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.skillCard {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 18px;
+  padding: 14px 16px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  color: white;
+}
+
+.skillCard h4 {
+  margin: 0 0 8px 0;
+}
+
+.skillCard p {
+  margin: 0;
+  text-indent: 0;
+  font-size: 1rem;
+  line-height: 1.4;
+}
 
 br {
     display: block; 
@@ -43,4 +184,25 @@ br {
     .Card1 {
         max-width: 60%;
     }
+}
+
+@media only screen and (max-width: 700px) {
+  .aboutCards {
+    grid-template-columns: 1fr;
+  }
+  .experienceTopRow {
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 6px;
+  }
+  .experienceTopRow h4 {
+    max-width: 62%;
+  }
+  .experienceTopRow span {
+    margin-left: auto;
+    text-align: right;
+  }
+  .skillsGrid {
+    grid-template-columns: 1fr;
+  }
 }

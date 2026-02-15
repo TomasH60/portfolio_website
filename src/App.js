@@ -5,6 +5,7 @@ import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import { motion, useAnimation } from "framer-motion";
 import MainDiv3 from "./components/Section3/MainDiv3";
+import MainDiv4 from "./components/Section4/MainDiv4";
 import Footer from "./components/Footer/Footer";
 import React from "react";
 
@@ -21,11 +22,19 @@ function App() {
   const [ref3, inView3] = useInView({
     threshold: 0.1
   });
+  const [ref4, inView4] = useInView({
+    threshold: 0.05,
+  });
+  const [ref5, inView5] = useInView({
+    threshold: 0.1,
+  });
   const animation = useAnimation();
   const animation1 = useAnimation();
   const animation2 = useAnimation();
   const animation3 = useAnimation();
-  console.log(inView, inView1, inView2, inView3);
+  const animation4 = useAnimation();
+  const animation5 = useAnimation();
+  console.log(inView, inView1, inView2, inView3, inView4, inView5);
   useEffect(() => {
     if (inView) {
       animation1.start({
@@ -66,8 +75,29 @@ function App() {
         },
       });
     }
+
+    if (inView4) {
+      animation4.start({
+        opacity: 1,
+        transition: {
+          duration: 1,
+        },
+      });
+    }
+
+    if (inView5) {
+      animation5.start({
+        y: 0,
+        opacity: 1,
+        transition: {
+          type: "spring",
+          duration: 1,
+          bounce: 0.3,
+        },
+      });
+    }
     
-  }, [animation, animation1, animation2, animation3, inView, inView1, inView2, inView3]);
+  }, [animation, animation1, animation2, animation3, animation4, animation5, inView, inView1, inView2, inView3, inView4, inView5]);
   return (
     <>
       <Header />
@@ -82,9 +112,15 @@ function App() {
       </section>
       <section id="Section3" ref={ref2}>
         <motion.h1 animate={animation2} style={{ opacity: 0 }}>
-          My Projects
+          Personal Projects
         </motion.h1>
         <MainDiv3 onAnimate={animation3} ref={ref3}/>
+      </section>
+      <section id="Section4" ref={ref4}>
+        <motion.h1 animate={animation4} style={{ opacity: 0 }}>
+          Freelance Work
+        </motion.h1>
+        <MainDiv4 onAnimate={animation5} ref={ref5}/>
       </section>
       <Footer />
     </>

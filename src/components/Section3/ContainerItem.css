@@ -13,11 +13,31 @@
   will-change: transform;
   border-radius: 1.5em;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background: #111;
 }
 .Image {
   position: absolute;
+  top: 0;
+  left: 0;
   height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center top;
   transition: transform 0.3s;
+}
+
+.ImageFitHeight {
+  width: auto;
+  height: 100%;
+  left: 50%;
+  transform: translateX(-50%) scale(1);
+  transform-origin: center center;
+  object-fit: initial;
+  background: #0f0f0f;
+}
+
+.ContainerItem:hover .ImageFitHeight {
+  transform: translateX(-50%) scale(1.04);
 }
 .TextItem a {
   position: relative;
@@ -33,15 +53,39 @@
   color: white;
   font-size: 14px;
 }
-.TextItem:hover ~ .Image {
-  transform: scale(1.25);
+.ButtonDisabled {
+  position: relative;
+  width: calc(100% - 60px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 10px 30px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+.ContainerItem:hover .Image:not(.ImageFitHeight) {
+  transform: scale(1.08);
 }
 
-.TextItem:hover {
+.ContainerItem:hover .ProjectPreview {
+  transform: scale(1.04);
+}
+
+.ContainerItem:hover .TextItem {
   transform: translateY(-100%);
 }
 .TextItem h3 {
   margin-left: 15px;
+  margin-bottom: 0;
+}
+
+.TextItem h4 {
+  margin: 6px 15px 10px 15px;
+  font-weight: 500;
+  opacity: 0.85;
 }
 .TextItem {
   z-index: 1;
@@ -53,6 +97,21 @@
   height: auto;
   color: white;
   background-color: rgba(0, 0, 0, 0.856);
+}
+
+.TextItem h4,
+.TextItem p,
+.TextItem a,
+.TextItem .ButtonDisabled {
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.ContainerItem:hover .TextItem h4,
+.ContainerItem:hover .TextItem p,
+.ContainerItem:hover .TextItem a,
+.ContainerItem:hover .TextItem .ButtonDisabled {
+  opacity: 1;
 }
 .ContainerItem h1 {
   position: absolute;
@@ -77,6 +136,29 @@
 .TextItem p {
   margin: 0 5% 5% 5%;
 }
+
+.ProjectPreview {
+  position: absolute;
+  inset: 0;
+  transition: transform 0.3s;
+}
+
+.SemanticPreview {
+  background-image: linear-gradient(150deg, #00b09b 0%, #96c93d 100%);
+}
+
+.ClientPreviewA {
+  background-image: linear-gradient(150deg, #0052d4 0%, #6fb1fc 100%);
+}
+
+.ClientPreviewB {
+  background-image: linear-gradient(150deg, #f7971e 0%, #ffd200 100%);
+}
+
+.ClientPreviewC {
+  background-image: linear-gradient(150deg, #134e5e 0%, #71b280 100%);
+}
+
 @media only screen and (max-width: 1015px) {
   .ContainerItem {
     width: 80vw;

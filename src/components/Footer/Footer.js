@@ -1,17 +1,19 @@
 import React from "react";
 import "./Footer.css";
-import logo from "../Header/img/logo.svg";
-import git from "./img/gitIcon.svg";
-import linked from "./img/linkedIcon.svg";
-import xlogo from "./img/xlogo.svg"
+import logo from "../../assets/icons/logo.svg";
+import git from "../../assets/icons/gitIcon.svg";
+import linked from "../../assets/icons/linkedIcon.svg";
+import xlogo from "../../assets/icons/xlogo.svg"
 
 const Footer = () => {
+  const year = new Date().getFullYear();
+
   return (
     <div className="Footer">
       <div className="logoIcon">
         <img src={logo} alt="error"></img>
       </div>
-      <p>© Copyright 2024. All right reserved</p>
+      <p>© Copyright {year}. All rights reserved</p>
       <div className="icons">
         <a href="https://github.com/TomasH60" target="_blank" rel="noreferrer">
           <img src={git} alt="error"></img>

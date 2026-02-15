@@ -1,6 +1,6 @@
 import React from "react";
 import MenuButton from "./MenuButton";
-import logo from "./img/logo.svg";
+import logo from "../../assets/icons/logo.svg";
 import MenuHamburger from "./MenuHamburger";
 import MobileMenuBlur from "./MobileMenuBlur";
 import "./Header.css";
@@ -50,6 +50,12 @@ const Header = () => {
           target="_self"
         />
         <MenuButton
+          text="Work"
+          link_src="#Section4"
+          className="MenuButton"
+          target="_self"
+        />
+        <MenuButton
           text="GitHub"
           link_src="https://github.com/TomasH60"
           className="MenuButton"
@@ -63,7 +69,6 @@ const Header = () => {
         />
         <MenuButton
           text="LinkedIn"
-          im
           link_src="https://www.linkedin.com/in/tom%C3%A1%C5%A1-hori%C4%8Dka-2b8a55229/"
           className="MenuButton"
           target="_blank"
@@ -99,6 +104,15 @@ const Header = () => {
               }}
             />
             <MenuButton
+              text="Work"
+              link_src="#"
+              className="MobileMenuButton"
+              target="_self"
+              onClick={(event) => {
+                mobileMenuHandler("Section4", event);
+              }}
+            />
+            <MenuButton
               text="GitHub"
               link_src="https://github.com/TomasH60"
               className="MobileMenuButton"
@@ -112,7 +126,6 @@ const Header = () => {
             />
             <MenuButton
               text="LinkedIn"
-              im
               link_src="https://www.linkedin.com/in/tom%C3%A1%C5%A1-hori%C4%8Dka-2b8a55229/"
               className="MobileMenuButton"
               target="_blank"

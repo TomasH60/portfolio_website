@@ -1,6 +1,6 @@
 import "./MainDiv.css";
 import React from "react";
-import head from "./img/Head.png";
+import head from "../../assets/images/head.png";
 import { motion } from "framer-motion";
 
 const MainDiv = () => {
@@ -17,20 +17,21 @@ const MainDiv = () => {
 
         </h1>
         <p>
-          an aspiring software developer
+          an aspiring software engineer 
           <br />
           and a computer science student
           <br /> at{" "}
           <a
             href="https://www.fiit.stuba.sk/"
             target="_blank"
+            rel="noreferrer"
             className="fiit-link"
           >
             FIIT STU
           </a>
         </p>
 
-        <a href={`${process.env.PUBLIC_URL}/cv.pdf`} target="_blank" className="Buttons">
+        <a href={`${process.env.PUBLIC_URL}/cv.pdf`} target="_blank" rel="noreferrer" className="Buttons">
           Get CV
         </a>
       </div>
