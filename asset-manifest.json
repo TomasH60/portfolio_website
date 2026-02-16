@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio_website/static/css/main.8807a1fa.css",
-    "main.js": "/portfolio_website/static/js/main.921b5e9c.js",
+    "main.js": "/portfolio_website/static/js/main.bc6dfd30.js",
     "static/media/pptechnik.png": "/portfolio_website/static/media/pptechnik.c653fe3d3473c81926cf.png",
     "static/media/enpo.png": "/portfolio_website/static/media/enpo.60c214e0ff1dd43e92bd.png",
     "static/media/ady.png": "/portfolio_website/static/media/ady.ac4c9ee0f3bb005373ca.png",
@@ -14,10 +14,10 @@
     "static/media/logo.svg": "/portfolio_website/static/media/logo.80677fecf1d9e5faf0b08803a05dbea7.svg",
     "static/media/xlogo.svg": "/portfolio_website/static/media/xlogo.63e6aefc8ecac35cc4c791e1f6b6bd8d.svg",
     "main.8807a1fa.css.map": "/portfolio_website/static/css/main.8807a1fa.css.map",
-    "main.921b5e9c.js.map": "/portfolio_website/static/js/main.921b5e9c.js.map"
+    "main.bc6dfd30.js.map": "/portfolio_website/static/js/main.bc6dfd30.js.map"
   },
   "entrypoints": [
     "static/css/main.8807a1fa.css",
-    "static/js/main.921b5e9c.js"
+    "static/js/main.bc6dfd30.js"
   ]
 }
