@@ -7,7 +7,7 @@
   background-color: #00000070;
   height: clamp(65px, 5vw, 80px);
   /*box-shadow: rgba(0, 0, 0, 0.342) 0px 5px 15px;*/
-  z-index: 10;
+  z-index: 1400;
   transition: background-color 0.5s;
 }
 .logo {
@@ -56,13 +56,13 @@
 }
 .MobileMenu {
   position: fixed;
-  top: 0;
+  top: clamp(65px, 5vw, 80px);
   width: 40%;
-  height: 100vh;
+  height: calc(100vh - clamp(65px, 5vw, 80px));
   min-width: 200px;
   background-color: #00000070;
   /*box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;*/
-  z-index: 5;
+  z-index: 1300;
   right: 0;
   
 

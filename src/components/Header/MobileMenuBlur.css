@@ -1,11 +1,11 @@
 .MobileMenuBlur {
     display: block;
     position: fixed;
-    height: 100vh;
+    height: calc(100vh - clamp(65px, 5vw, 80px));
     width: 100%;
     backdrop-filter: blur(8px);
     background-color: rgba(0, 0, 0, 0.082);
     margin: 0;
-    z-index: 4;
-    top: 0;
+    z-index: 1250;
+    top: clamp(65px, 5vw, 80px);
 }

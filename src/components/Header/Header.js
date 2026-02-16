@@ -24,7 +24,12 @@ const Header = () => {
   const mobileMenuHandler = (id, event) => {
     event.preventDefault();
     setToggle(false);
-    document.getElementById(id).scrollIntoView({behavior: 'smooth'});
+    setTimeout(() => {
+      const section = document.getElementById(id);
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }, 80);
   };
 
   return (
